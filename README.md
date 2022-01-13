@@ -1,3 +1,4 @@
+![CI Python DBaaS Postgres](https://github.com/ionos-cloud/sdk-resources/workflows/[%20CI%20]%20DBaaS%20Postgres%20/%20Python/badge.svg)
 [![PyPI version](https://img.shields.io/pypi/v/ionoscloud-dbaas-postgres)](https://pypi.org/project/ionoscloud-dbaas-postgres/)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 
