@@ -6,18 +6,18 @@ import importlib
 import os
 import re
 
-try:
-    import ionoscloud
-except ImportError:
-    pass
-try:
-    import ionoscloud_autoscaling as ionoscloud
-except ImportError:
-    pass
-try:
-    import ionoscloud_dbaas_postgres as ionoscloud
-except ImportError:
-    pass
+module_names_to_import = [
+  'ionoscloud',
+  'ionoscloud_autoscaling',
+  'ionoscloud_dbaas_postgres',
+]
+
+for module_name in module_names_to_import:
+  try:
+      ionoscloud = importlib.import_module(module_name)
+      break
+  except ImportError:
+      pass
 
 def get_request_classes():
     classes = []
