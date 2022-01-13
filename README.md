@@ -53,4 +53,4 @@ Then import the package:
 ```python
 import ionoscloud_dbaas_postgres
 ```
-## Our latest, most up to date documentation is available [here](https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/master/DOCS.md)
+## Our latest, most up to date documentation is available [here](https://github.com/ionos-cloud/sdk-python-dbaas-postgres/blob/master/docs/README.md)
