@@ -22,57 +22,21 @@ Retrieves a list of all PostgreSQL versions available for this cluster including
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
-    try:
-        # List PostgreSQL versions
-        api_response = api_instance.cluster_postgres_versions_get(cluster_id)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.cluster_postgres_versions_get: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
@@ -80,7 +44,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     try:
         # List PostgreSQL versions
         api_response = api_instance.cluster_postgres_versions_get(cluster_id)
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.cluster_postgres_versions_get: %s\n' % e)
 ```
@@ -93,7 +57,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### Authorization
 
@@ -113,57 +77,21 @@ Delete a PostgreSQL cluster.
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
-    try:
-        # Delete a cluster
-        api_response = api_instance.clusters_delete(cluster_id)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.clusters_delete: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
@@ -171,7 +99,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     try:
         # Delete a cluster
         api_response = api_instance.clusters_delete(cluster_id)
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.clusters_delete: %s\n' % e)
 ```
@@ -184,7 +112,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -204,57 +132,21 @@ You can retrieve a PostgreSQL cluster by using its ID. This value can be found i
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
-    try:
-        # Fetch a cluster
-        api_response = api_instance.clusters_find_by_id(cluster_id)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.clusters_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
@@ -262,7 +154,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     try:
         # Fetch a cluster
         api_response = api_instance.clusters_find_by_id(cluster_id)
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.clusters_find_by_id: %s\n' % e)
 ```
@@ -275,7 +167,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -295,65 +187,28 @@ Retrieves a list of PostgreSQL clusters.
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    filter_name = 'filter_name_example' # str | Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the 'displayName' field.  (optional)
-    try:
-        # List clusters
-        api_response = api_instance.clusters_get(filter_name=filter_name)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.clusters_get: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    filter_name = 'filter_name_example' # str | Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the 'displayName' field.  (optional)
     try:
         # List clusters
-        api_response = api_instance.clusters_get(filter_name=filter_name)
-        pprint(api_response)
+        api_response = api_instance.clusters_get()
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.clusters_get: %s\n' % e)
 ```
@@ -366,7 +221,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ClusterList**](ClusterList.md)
+[**ClusterList**](../models/ClusterList.md)
 
 ### Authorization
 
@@ -386,58 +241,21 @@ Patch attributes of a PostgreSQL cluster.
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
-    patch_cluster_request = ionoscloud_dbaas_postgres.PatchClusterRequest() # PatchClusterRequest | The modified cluster.
-    try:
-        # Patch a cluster
-        api_response = api_instance.clusters_patch(cluster_id, patch_cluster_request)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.clusters_patch: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
@@ -446,7 +264,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     try:
         # Patch a cluster
         api_response = api_instance.clusters_patch(cluster_id, patch_cluster_request)
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.clusters_patch: %s\n' % e)
 ```
@@ -460,7 +278,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -480,57 +298,21 @@ Creates a new PostgreSQL cluster. If the `fromBackup` field is populated, the ne
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    create_cluster_request = ionoscloud_dbaas_postgres.CreateClusterRequest() # CreateClusterRequest | The cluster to be created.
-    try:
-        # Create a cluster
-        api_response = api_instance.clusters_post(create_cluster_request)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.clusters_post: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
@@ -538,7 +320,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     try:
         # Create a cluster
         api_response = api_instance.clusters_post(create_cluster_request)
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.clusters_post: %s\n' % e)
 ```
@@ -551,7 +333,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -571,63 +353,28 @@ Retrieves a list of all available PostgreSQL versions.
 
 ### Example
 
-* Basic Authentication (basicAuth):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud_dbaas_postgres
 from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud_dbaas_postgres.Configuration(
     host = 'https://api.ionos.com/databases/postgresql',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: basicAuth
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    try:
-        # List PostgreSQL versions
-        api_response = api_instance.postgres_versions_get()
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ClustersApi.postgres_versions_get: %s\n' % e)
-```
 
-* Api Key Authentication (tokenAuth):
-```python
-from __future__ import print_function
-import time
-import ionoscloud_dbaas_postgres
-from ionoscloud_dbaas_postgres.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/databases/postgresql
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud_dbaas_postgres.Configuration(
-    host = 'https://api.ionos.com/databases/postgresql',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: tokenAuth
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
     try:
         # List PostgreSQL versions
         api_response = api_instance.postgres_versions_get()
-        pprint(api_response)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ClustersApi.postgres_versions_get: %s\n' % e)
 ```
@@ -637,7 +384,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### Authorization
 

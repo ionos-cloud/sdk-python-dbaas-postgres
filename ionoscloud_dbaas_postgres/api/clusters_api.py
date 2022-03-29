@@ -94,7 +94,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -117,7 +118,7 @@ class ClustersApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -230,7 +231,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -253,7 +255,7 @@ class ClustersApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -366,7 +368,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -389,7 +392,7 @@ class ClustersApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -502,7 +505,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -519,7 +523,7 @@ class ClustersApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'filter_name' in local_var_params and local_var_params['filter_name'] is not None:  # noqa: E501
             query_params.append(('filter.name', local_var_params['filter_name']))  # noqa: E501
 
@@ -639,7 +643,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -666,7 +671,7 @@ class ClustersApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -785,7 +790,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -806,7 +812,7 @@ class ClustersApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -920,7 +926,8 @@ class ClustersApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -937,7 +944,7 @@ class ClustersApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 

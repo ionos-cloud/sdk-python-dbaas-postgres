@@ -94,7 +94,8 @@ class BackupsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -117,7 +118,7 @@ class BackupsApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -230,7 +231,8 @@ class BackupsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -253,7 +255,7 @@ class BackupsApi(object):
         if 'backup_id' in local_var_params:
             path_params['backupId'] = local_var_params['backup_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -361,7 +363,8 @@ class BackupsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -378,7 +381,7 @@ class BackupsApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 

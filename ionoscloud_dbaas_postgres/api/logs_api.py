@@ -29,12 +29,14 @@ class LogsApi(object):
 
         :param cluster_id: The unique ID of the cluster. (required)
         :type cluster_id: str
-        :param limit: The maximal number of log lines to return.
-        :type limit: int
-        :param start: The start time for the query in RFC3339 format.
+        :param start: The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago.
         :type start: datetime
-        :param end: The end time for the query in RFC3339 format.
+        :param end: The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp.
         :type end: datetime
+        :param direction: The direction in which to scan through the logs. The logs are returned in order of the direction.
+        :type direction: str
+        :param limit: The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction).
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -65,12 +67,14 @@ class LogsApi(object):
 
         :param cluster_id: The unique ID of the cluster. (required)
         :type cluster_id: str
-        :param limit: The maximal number of log lines to return.
-        :type limit: int
-        :param start: The start time for the query in RFC3339 format.
+        :param start: The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago.
         :type start: datetime
-        :param end: The end time for the query in RFC3339 format.
+        :param end: The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp.
         :type end: datetime
+        :param direction: The direction in which to scan through the logs. The logs are returned in order of the direction.
+        :type direction: str
+        :param limit: The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction).
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -98,9 +102,10 @@ class LogsApi(object):
 
         all_params = [
             'cluster_id',
-            'limit',
             'start',
-            'end'
+            'end',
+            'direction',
+            'limit'
         ]
         all_params.extend(
             [
@@ -109,7 +114,8 @@ class LogsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -136,13 +142,15 @@ class LogsApi(object):
         if 'cluster_id' in local_var_params:
             path_params['clusterId'] = local_var_params['cluster_id']  # noqa: E501
 
-        query_params = []
-        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
-            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'start' in local_var_params and local_var_params['start'] is not None:  # noqa: E501
             query_params.append(('start', local_var_params['start']))  # noqa: E501
         if 'end' in local_var_params and local_var_params['end'] is not None:  # noqa: E501
             query_params.append(('end', local_var_params['end']))  # noqa: E501
+        if 'direction' in local_var_params and local_var_params['direction'] is not None:  # noqa: E501
+            query_params.append(('direction', local_var_params['direction']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
 

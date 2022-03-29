@@ -12,6 +12,7 @@ Properties with all data needed to create a new PostgreSQL cluster.
 | **storage_type** | [**StorageType**](StorageType.md) |  |  |
 | **connections** | [**list[Connection]**](Connection.md) |  |  |
 | **location** | [**Location**](Location.md) |  |  |
+| **backup_location** | [**BackupLocation**](BackupLocation.md) |  | [optional]  |
 | **display_name** | **str** | The friendly name of your cluster. |  |
 | **maintenance_window** | [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional]  |
 | **credentials** | [**DBUser**](DBUser.md) |  |  |
