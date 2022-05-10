@@ -11,8 +11,8 @@ Properties with all data needed to create a new PostgreSQL cluster.
 | **storage_size** | **int** | The amount of storage per instance in megabytes. |  |
 | **storage_type** | [**StorageType**](StorageType.md) |  |  |
 | **connections** | [**list[Connection]**](Connection.md) |  |  |
-| **location** | [**Location**](Location.md) |  |  |
-| **backup_location** | [**BackupLocation**](BackupLocation.md) |  | [optional]  |
+| **location** | **str** | The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.  |  |
+| **backup_location** | **str** | The S3 location where the backups will be stored. | [optional]  |
 | **display_name** | **str** | The friendly name of your cluster. |  |
 | **maintenance_window** | [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional]  |
 | **credentials** | [**DBUser**](DBUser.md) |  |  |

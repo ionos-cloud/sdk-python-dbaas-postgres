@@ -48,9 +48,9 @@ class CreateClusterProperties(object):
 
         'connections': 'list[Connection]',
 
-        'location': 'Location',
+        'location': 'str',
 
-        'backup_location': 'BackupLocation',
+        'backup_location': 'str',
 
         'display_name': 'str',
 
@@ -334,9 +334,10 @@ class CreateClusterProperties(object):
     def location(self):
         """Gets the location of this CreateClusterProperties.  # noqa: E501
 
+        The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.   # noqa: E501
 
         :return: The location of this CreateClusterProperties.  # noqa: E501
-        :rtype: Location
+        :rtype: str
         """
         return self._location
 
@@ -344,9 +345,10 @@ class CreateClusterProperties(object):
     def location(self, location):
         """Sets the location of this CreateClusterProperties.
 
+        The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.   # noqa: E501
 
         :param location: The location of this CreateClusterProperties.  # noqa: E501
-        :type location: Location
+        :type location: str
         """
         if self.local_vars_configuration.client_side_validation and location is None:  # noqa: E501
             raise ValueError("Invalid value for `location`, must not be `None`")  # noqa: E501
@@ -357,9 +359,10 @@ class CreateClusterProperties(object):
     def backup_location(self):
         """Gets the backup_location of this CreateClusterProperties.  # noqa: E501
 
+        The S3 location where the backups will be stored.  # noqa: E501
 
         :return: The backup_location of this CreateClusterProperties.  # noqa: E501
-        :rtype: BackupLocation
+        :rtype: str
         """
         return self._backup_location
 
@@ -367,9 +370,10 @@ class CreateClusterProperties(object):
     def backup_location(self, backup_location):
         """Sets the backup_location of this CreateClusterProperties.
 
+        The S3 location where the backups will be stored.  # noqa: E501
 
         :param backup_location: The backup_location of this CreateClusterProperties.  # noqa: E501
-        :type backup_location: BackupLocation
+        :type backup_location: str
         """
 
         self._backup_location = backup_location

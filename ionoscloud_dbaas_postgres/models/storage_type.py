@@ -30,8 +30,10 @@ class StorageType(object):
     """
     HDD = "HDD"
     SSD = "SSD"
+    SSD_STANDARD = "SSD Standard"
+    SSD_PREMIUM = "SSD Premium"
 
-    allowable_values = [HDD, SSD]  # noqa: E501
+    allowable_values = [HDD, SSD, SSD_STANDARD, SSD_PREMIUM]  # noqa: E501
 
     """
     Attributes:

@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 # import apis into sdk package
 from ionoscloud_dbaas_postgres.api.backups_api import BackupsApi
@@ -34,7 +34,6 @@ from ionoscloud_dbaas_postgres.exceptions import ApiAttributeError
 from ionoscloud_dbaas_postgres.exceptions import ApiException
 # import models into sdk package
 from ionoscloud_dbaas_postgres.models.api_version import APIVersion
-from ionoscloud_dbaas_postgres.models.backup_location import BackupLocation
 from ionoscloud_dbaas_postgres.models.backup_metadata import BackupMetadata
 from ionoscloud_dbaas_postgres.models.backup_response import BackupResponse
 from ionoscloud_dbaas_postgres.models.cluster_backup import ClusterBackup
@@ -55,7 +54,6 @@ from ionoscloud_dbaas_postgres.models.db_user import DBUser
 from ionoscloud_dbaas_postgres.models.day_of_the_week import DayOfTheWeek
 from ionoscloud_dbaas_postgres.models.error_message import ErrorMessage
 from ionoscloud_dbaas_postgres.models.error_response import ErrorResponse
-from ionoscloud_dbaas_postgres.models.location import Location
 from ionoscloud_dbaas_postgres.models.maintenance_window import MaintenanceWindow
 from ionoscloud_dbaas_postgres.models.metadata import Metadata
 from ionoscloud_dbaas_postgres.models.pagination import Pagination

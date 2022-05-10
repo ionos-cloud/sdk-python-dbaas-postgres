@@ -8,7 +8,7 @@ import re
 
 module_names_to_import = [
   'ionoscloud',
-  'ionoscloud_autoscaling',
+  'ionoscloud_vm_autoscaling',
   'ionoscloud_dbaas_postgres',
 ]
 

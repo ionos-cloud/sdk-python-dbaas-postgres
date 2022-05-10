@@ -38,9 +38,9 @@ class ClusterProperties(object):
 
         'postgres_version': 'str',
 
-        'location': 'Location',
+        'location': 'str',
 
-        'backup_location': 'BackupLocation',
+        'backup_location': 'str',
 
         'instances': 'int',
 
@@ -182,9 +182,10 @@ class ClusterProperties(object):
     def location(self):
         """Gets the location of this ClusterProperties.  # noqa: E501
 
+        The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.   # noqa: E501
 
         :return: The location of this ClusterProperties.  # noqa: E501
-        :rtype: Location
+        :rtype: str
         """
         return self._location
 
@@ -192,9 +193,10 @@ class ClusterProperties(object):
     def location(self, location):
         """Sets the location of this ClusterProperties.
 
+        The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.   # noqa: E501
 
         :param location: The location of this ClusterProperties.  # noqa: E501
-        :type location: Location
+        :type location: str
         """
 
         self._location = location
@@ -203,9 +205,10 @@ class ClusterProperties(object):
     def backup_location(self):
         """Gets the backup_location of this ClusterProperties.  # noqa: E501
 
+        The S3 location where the backups will be stored.  # noqa: E501
 
         :return: The backup_location of this ClusterProperties.  # noqa: E501
-        :rtype: BackupLocation
+        :rtype: str
         """
         return self._backup_location
 
@@ -213,9 +216,10 @@ class ClusterProperties(object):
     def backup_location(self, backup_location):
         """Sets the backup_location of this ClusterProperties.
 
+        The S3 location where the backups will be stored.  # noqa: E501
 
         :param backup_location: The backup_location of this ClusterProperties.  # noqa: E501
-        :type backup_location: BackupLocation
+        :type backup_location: str
         """
 
         self._backup_location = backup_location
