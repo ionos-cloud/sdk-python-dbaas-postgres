@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.0.3 (July, 2022)
+  
+### Features
+* add size and location to ClusterBackup
+* added certificate pinning option
+
 ## v1.0.2 (May, 2022)
 
 ### Enhancements:
