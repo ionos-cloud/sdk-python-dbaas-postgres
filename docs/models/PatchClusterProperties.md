@@ -1,6 +1,6 @@
 # PatchClusterProperties
 
-Properties of the payload to change a cluster
+Properties of the payload to change a cluster.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

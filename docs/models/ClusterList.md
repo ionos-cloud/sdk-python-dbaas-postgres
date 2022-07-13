@@ -1,6 +1,6 @@
 # ClusterList
 
-List of clusters
+List of clusters.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

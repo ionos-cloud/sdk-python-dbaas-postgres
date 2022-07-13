@@ -1,6 +1,6 @@
 # ClusterBackupList
 
-List of backups
+List of backups.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

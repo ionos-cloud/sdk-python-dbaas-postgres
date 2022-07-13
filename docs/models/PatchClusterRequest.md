@@ -1,6 +1,6 @@
 # PatchClusterRequest
 
-Request payload to change a cluster
+Request payload to change a cluster.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
