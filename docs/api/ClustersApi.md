@@ -260,7 +260,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
     cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
-    patch_cluster_request = ionoscloud_dbaas_postgres.PatchClusterRequest() # PatchClusterRequest | The modified cluster.
+    patch_cluster_request = ionoscloud_dbaas_postgres.PatchClusterRequest() # PatchClusterRequest | Part of the cluster which should be modified.
     try:
         # Patch a cluster
         api_response = api_instance.clusters_patch(cluster_id, patch_cluster_request)
@@ -274,7 +274,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **cluster_id** | **str**| The unique ID of the cluster. |  |
-| **patch_cluster_request** | [**PatchClusterRequest**](PatchClusterRequest.md)| The modified cluster. |  |
+| **patch_cluster_request** | [**PatchClusterRequest**](../models/PatchClusterRequest.md)| Part of the cluster which should be modified. |  |
 
 ### Return type
 
@@ -329,7 +329,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_cluster_request** | [**CreateClusterRequest**](CreateClusterRequest.md)| The cluster to be created. |  |
+| **create_cluster_request** | [**CreateClusterRequest**](../models/CreateClusterRequest.md)| The cluster to be created. |  |
 
 ### Return type
 

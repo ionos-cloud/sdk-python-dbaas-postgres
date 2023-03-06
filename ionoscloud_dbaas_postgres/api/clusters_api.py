@@ -573,7 +573,7 @@ class ClustersApi(object):
 
         :param cluster_id: The unique ID of the cluster. (required)
         :type cluster_id: str
-        :param patch_cluster_request: The modified cluster. (required)
+        :param patch_cluster_request: Part of the cluster which should be modified. (required)
         :type patch_cluster_request: PatchClusterRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -605,7 +605,7 @@ class ClustersApi(object):
 
         :param cluster_id: The unique ID of the cluster. (required)
         :type cluster_id: str
-        :param patch_cluster_request: The modified cluster. (required)
+        :param patch_cluster_request: Part of the cluster which should be modified. (required)
         :type patch_cluster_request: PatchClusterRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

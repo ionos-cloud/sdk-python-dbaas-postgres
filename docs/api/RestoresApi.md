@@ -48,7 +48,7 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **cluster_id** | **str**| The unique ID of the cluster. |  |
-| **create_restore_request** | [**CreateRestoreRequest**](CreateRestoreRequest.md)| The restore request to create. |  |
+| **create_restore_request** | [**CreateRestoreRequest**](../models/CreateRestoreRequest.md)| The restore request to create. |  |
 
 ### Return type
 
