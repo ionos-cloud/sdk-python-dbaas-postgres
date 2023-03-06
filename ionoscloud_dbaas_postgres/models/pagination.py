@@ -47,10 +47,10 @@ class Pagination(object):
 
         'limit': 'limit',
 
-        'links': '_links',
+        'links': 'links',
     }
 
-    def __init__(self, offset=None, limit=None, links=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, offset=0, limit=100, links=None, local_vars_configuration=None):  # noqa: E501
         """Pagination - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,7 +73,7 @@ class Pagination(object):
     def offset(self):
         """Gets the offset of this Pagination.  # noqa: E501
 
-        The offset specified in the request (if none was specified, the default offset is 0) (not implemented yet).   # noqa: E501
+        The offset specified in the request (if none was specified, the default offset is 0).   # noqa: E501
 
         :return: The offset of this Pagination.  # noqa: E501
         :rtype: int
@@ -84,7 +84,7 @@ class Pagination(object):
     def offset(self, offset):
         """Sets the offset of this Pagination.
 
-        The offset specified in the request (if none was specified, the default offset is 0) (not implemented yet).   # noqa: E501
+        The offset specified in the request (if none was specified, the default offset is 0).   # noqa: E501
 
         :param offset: The offset of this Pagination.  # noqa: E501
         :type offset: int
@@ -99,7 +99,7 @@ class Pagination(object):
     def limit(self):
         """Gets the limit of this Pagination.  # noqa: E501
 
-        The limit specified in the request (if none was specified, use the endpoint's default pagination limit) (not implemented yet, always return number of items).   # noqa: E501
+        The limit specified in the request (if none was specified, the default limit is 100).   # noqa: E501
 
         :return: The limit of this Pagination.  # noqa: E501
         :rtype: int
@@ -110,11 +110,14 @@ class Pagination(object):
     def limit(self, limit):
         """Sets the limit of this Pagination.
 
-        The limit specified in the request (if none was specified, use the endpoint's default pagination limit) (not implemented yet, always return number of items).   # noqa: E501
+        The limit specified in the request (if none was specified, the default limit is 100).   # noqa: E501
 
         :param limit: The limit of this Pagination.  # noqa: E501
         :type limit: int
         """
+        if (self.local_vars_configuration.client_side_validation and
+                limit is not None and limit > 1000):  # noqa: E501
+            raise ValueError("Invalid value for `limit`, must be a value less than or equal to `1000`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 limit is not None and limit < 0):  # noqa: E501
             raise ValueError("Invalid value for `limit`, must be a value greater than or equal to `0`")  # noqa: E501

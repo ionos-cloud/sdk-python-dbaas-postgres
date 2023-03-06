@@ -179,7 +179,7 @@ basicAuth, tokenAuth
  - **Accept**: application/json
 
 # **clusters_get**
-> ClusterList clusters_get(filter_name=filter_name)
+> ClusterList clusters_get(limit=limit, offset=offset, filter_name=filter_name)
 
 List clusters
 
@@ -217,6 +217,8 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional] [default to 100] |
+| **offset** | **int**| The first element to return. Use together with &#39;limit&#39; for pagination. | [optional] [default to 0] |
 | **filter_name** | **str**| Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  | [optional]  |
 
 ### Return type

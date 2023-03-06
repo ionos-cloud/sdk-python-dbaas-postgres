@@ -10,7 +10,7 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
 
 
 # **cluster_backups_get**
-> ClusterBackupList cluster_backups_get(cluster_id)
+> ClusterBackupList cluster_backups_get(cluster_id, limit=limit, offset=offset)
 
 List backups of cluster
 
@@ -50,6 +50,8 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **cluster_id** | **str**| The unique ID of the cluster. |  |
+| **limit** | **int**| The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional] [default to 100] |
+| **offset** | **int**| The first element to return. Use together with &#39;limit&#39; for pagination. | [optional] [default to 0] |
 
 ### Return type
 
@@ -120,7 +122,7 @@ basicAuth, tokenAuth
  - **Accept**: application/json
 
 # **clusters_backups_get**
-> ClusterBackupList clusters_backups_get()
+> ClusterBackupList clusters_backups_get(limit=limit, offset=offset)
 
 List cluster backups
 
@@ -155,7 +157,11 @@ with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional] [default to 100] |
+| **offset** | **int**| The first element to return. Use together with &#39;limit&#39; for pagination. | [optional] [default to 0] |
 
 ### Return type
 

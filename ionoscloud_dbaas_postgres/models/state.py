@@ -31,10 +31,11 @@ class State(object):
     AVAILABLE = "AVAILABLE"
     BUSY = "BUSY"
     DESTROYING = "DESTROYING"
+    DEGRADED = "DEGRADED"
     FAILED = "FAILED"
     UNKNOWN = "UNKNOWN"
 
-    allowable_values = [AVAILABLE, BUSY, DESTROYING, FAILED, UNKNOWN]  # noqa: E501
+    allowable_values = [AVAILABLE, BUSY, DESTROYING, DEGRADED, FAILED, UNKNOWN]  # noqa: E501
 
     """
     Attributes:
