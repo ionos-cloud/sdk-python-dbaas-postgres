@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.0 (March, 2023)
+
+### Features
+* added `DEGRADED` state for clusters
+
 ## v1.0.3 (July, 2022)
   
 ### Features
