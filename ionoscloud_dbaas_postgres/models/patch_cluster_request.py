@@ -34,7 +34,7 @@ class PatchClusterRequest(object):
     """
     openapi_types = {
 
-        'metadata': 'Metadata',
+        'metadata': 'ClusterMetadata',
 
         'properties': 'PatchClusterProperties',
     }
@@ -68,7 +68,7 @@ class PatchClusterRequest(object):
 
 
         :return: The metadata of this PatchClusterRequest.  # noqa: E501
-        :rtype: Metadata
+        :rtype: ClusterMetadata
         """
         return self._metadata
 
@@ -78,7 +78,7 @@ class PatchClusterRequest(object):
 
 
         :param metadata: The metadata of this PatchClusterRequest.  # noqa: E501
-        :type metadata: Metadata
+        :type metadata: ClusterMetadata
         """
 
         self._metadata = metadata

@@ -36,7 +36,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.BackupsApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     try:
         # List backups of cluster
         api_response = api_instance.cluster_backups_get(cluster_id)
@@ -93,7 +93,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.BackupsApi(api_client)
-    backup_id = 'backup_id_example' # str | The unique ID of the backup.
+    backup_id = '498ae72f-411f-11eb-9d07-046c59cc737e-4oymiqu-12' # str | The unique ID of the backup.
     try:
         # Fetch a cluster backup
         api_response = api_instance.clusters_backups_find_by_id(backup_id)

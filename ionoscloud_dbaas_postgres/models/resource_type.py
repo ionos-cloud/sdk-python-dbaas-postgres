@@ -28,11 +28,13 @@ class ResourceType(object):
     """
     allowed enum values
     """
-    COLLECTION = "collection"
-    CLUSTER = "cluster"
-    BACKUP = "backup"
+    COLLECTION = 'collection'
+    CLUSTER = 'cluster'
+    BACKUP = 'backup'
+    USER = 'user'
+    DATABASE = 'database'
 
-    allowable_values = [COLLECTION, CLUSTER, BACKUP]  # noqa: E501
+    allowable_values = [COLLECTION, CLUSTER, BACKUP, USER, DATABASE]  # noqa: E501
 
     """
     Attributes:

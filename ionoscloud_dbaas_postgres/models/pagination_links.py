@@ -36,7 +36,7 @@ class PaginationLinks(object):
 
         'prev': 'str',
 
-        '_self': 'str',
+        'var_self': 'str',
 
         'next': 'str',
     }
@@ -45,26 +45,26 @@ class PaginationLinks(object):
 
         'prev': 'prev',
 
-        '_self': 'self',
+        'var_self': 'self',
 
         'next': 'next',
     }
 
-    def __init__(self, prev=None, _self=None, next=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, prev=None, var_self=None, next=None, local_vars_configuration=None):  # noqa: E501
         """PaginationLinks - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._prev = None
-        self.__self = None
+        self._var_self = None
         self._next = None
         self.discriminator = None
 
         if prev is not None:
             self.prev = prev
-        if _self is not None:
-            self._self = _self
+        if var_self is not None:
+            self.var_self = var_self
         if next is not None:
             self.next = next
 
@@ -93,27 +93,27 @@ class PaginationLinks(object):
         self._prev = prev
 
     @property
-    def _self(self):
-        """Gets the _self of this PaginationLinks.  # noqa: E501
+    def var_self(self):
+        """Gets the var_self of this PaginationLinks.  # noqa: E501
 
         URL (with offset and limit parameters) of the current page.   # noqa: E501
 
-        :return: The _self of this PaginationLinks.  # noqa: E501
+        :return: The var_self of this PaginationLinks.  # noqa: E501
         :rtype: str
         """
-        return self.__self
+        return self._var_self
 
-    @_self.setter
-    def _self(self, _self):
-        """Sets the _self of this PaginationLinks.
+    @var_self.setter
+    def var_self(self, var_self):
+        """Sets the var_self of this PaginationLinks.
 
         URL (with offset and limit parameters) of the current page.   # noqa: E501
 
-        :param _self: The _self of this PaginationLinks.  # noqa: E501
-        :type _self: str
+        :param var_self: The var_self of this PaginationLinks.  # noqa: E501
+        :type var_self: str
         """
 
-        self.__self = _self
+        self._var_self = var_self
 
     @property
     def next(self):

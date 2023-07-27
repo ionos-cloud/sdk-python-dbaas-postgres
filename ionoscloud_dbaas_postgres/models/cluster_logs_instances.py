@@ -36,7 +36,7 @@ class ClusterLogsInstances(object):
 
         'name': 'str',
 
-        'messages': 'list[ClusterLogsMessages]',
+        'messages': 'list[ClusterLogsInstancesMessages]',
     }
 
     attribute_map = {
@@ -91,7 +91,7 @@ class ClusterLogsInstances(object):
 
 
         :return: The messages of this ClusterLogsInstances.  # noqa: E501
-        :rtype: list[ClusterLogsMessages]
+        :rtype: list[ClusterLogsInstancesMessages]
         """
         return self._messages
 
@@ -101,7 +101,7 @@ class ClusterLogsInstances(object):
 
 
         :param messages: The messages of this ClusterLogsInstances.  # noqa: E501
-        :type messages: list[ClusterLogsMessages]
+        :type messages: list[ClusterLogsInstancesMessages]
         """
 
         self._messages = messages

@@ -40,7 +40,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     try:
         # List PostgreSQL versions
         api_response = api_instance.cluster_postgres_versions_get(cluster_id)
@@ -95,7 +95,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     try:
         # Delete a cluster
         api_response = api_instance.clusters_delete(cluster_id)
@@ -150,7 +150,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     try:
         # Fetch a cluster
         api_response = api_instance.clusters_find_by_id(cluster_id)
@@ -261,7 +261,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.ClustersApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     patch_cluster_request = ionoscloud_dbaas_postgres.PatchClusterRequest() # PatchClusterRequest | Part of the cluster which should be modified.
     try:
         # Patch a cluster

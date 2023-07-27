@@ -1,15 +1,14 @@
 # Metadata
 
-Metadata of the resource.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **created_date** | **datetime** | The ISO 8601 creation timestamp. | [optional]  |
-| **created_by** | **str** |  | [optional]  |
-| **created_by_user_id** | **str** |  | [optional]  |
-| **last_modified_date** | **datetime** | The ISO 8601 modified timestamp. | [optional]  |
-| **last_modified_by** | **str** |  | [optional]  |
-| **last_modified_by_user_id** | **str** |  | [optional]  |
-| **state** | [**State**](State.md) |  | [optional]  |
+| **created_by** | **str** | The URN of an IAM user. | [optional]  |
+| **created_by_user_id** | **str** | The ID of an IAM user. | [optional]  |
+| **created_date** | **datetime** | An ISO 8601 timestamp. | [optional]  |
+| **last_modified_by** | **str** | The URN of an IAM user. | [optional]  |
+| **last_modified_by_user_id** | **str** | The ID of an IAM user. | [optional]  |
+| **last_modified_date** | **datetime** | An ISO 8601 timestamp. | [optional]  |
+| **resource_urn** | **str** | The URN of the resource. | [optional]  |
 
 

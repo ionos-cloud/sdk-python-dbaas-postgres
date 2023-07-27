@@ -154,10 +154,19 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
 | ClustersApi | [**clusters_patch**](docs/api/ClustersApi.md#clusters_patch) | **PATCH** /clusters/{clusterId} | Patch a cluster |
 | ClustersApi | [**clusters_post**](docs/api/ClustersApi.md#clusters_post) | **POST** /clusters | Create a cluster |
 | ClustersApi | [**postgres_versions_get**](docs/api/ClustersApi.md#postgres_versions_get) | **GET** /clusters/postgresversions | List PostgreSQL versions |
+| DatabasesApi | [**databases_delete**](docs/api/DatabasesApi.md#databases_delete) | **DELETE** /clusters/{clusterId}/databases/{databasename} | Delete database |
+| DatabasesApi | [**databases_get**](docs/api/DatabasesApi.md#databases_get) | **GET** /clusters/{clusterId}/databases/{databasename} | Get database |
+| DatabasesApi | [**databases_list**](docs/api/DatabasesApi.md#databases_list) | **GET** /clusters/{clusterId}/databases | List databases |
+| DatabasesApi | [**databases_post**](docs/api/DatabasesApi.md#databases_post) | **POST** /clusters/{clusterId}/databases | Create a database |
 | LogsApi | [**cluster_logs_get**](docs/api/LogsApi.md#cluster_logs_get) | **GET** /clusters/{clusterId}/logs | Get logs of your cluster |
 | MetadataApi | [**infos_version_get**](docs/api/MetadataApi.md#infos_version_get) | **GET** /infos/version | Get the current API version |
 | MetadataApi | [**infos_versions_get**](docs/api/MetadataApi.md#infos_versions_get) | **GET** /infos/versions | Fetch all API versions |
 | RestoresApi | [**cluster_restore_post**](docs/api/RestoresApi.md#cluster_restore_post) | **POST** /clusters/{clusterId}/restore | In-place restore of a cluster |
+| UsersApi | [**users_delete**](docs/api/UsersApi.md#users_delete) | **DELETE** /clusters/{clusterId}/users/{username} | Delete user |
+| UsersApi | [**users_get**](docs/api/UsersApi.md#users_get) | **GET** /clusters/{clusterId}/users/{username} | Get user |
+| UsersApi | [**users_list**](docs/api/UsersApi.md#users_list) | **GET** /clusters/{clusterId}/users | List users |
+| UsersApi | [**users_patch**](docs/api/UsersApi.md#users_patch) | **PATCH** /clusters/{clusterId}/users/{username} | Patch user |
+| UsersApi | [**users_post**](docs/api/UsersApi.md#users_post) | **POST** /clusters/{clusterId}/users | Create a user |
 
 </details>
 
@@ -177,7 +186,8 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
  - [ClusterListAllOf](docs/models/ClusterListAllOf)
  - [ClusterLogs](docs/models/ClusterLogs)
  - [ClusterLogsInstances](docs/models/ClusterLogsInstances)
- - [ClusterLogsMessages](docs/models/ClusterLogsMessages)
+ - [ClusterLogsInstancesMessages](docs/models/ClusterLogsInstancesMessages)
+ - [ClusterMetadata](docs/models/ClusterMetadata)
  - [ClusterProperties](docs/models/ClusterProperties)
  - [ClusterResponse](docs/models/ClusterResponse)
  - [Connection](docs/models/Connection)
@@ -185,7 +195,13 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
  - [CreateClusterRequest](docs/models/CreateClusterRequest)
  - [CreateRestoreRequest](docs/models/CreateRestoreRequest)
  - [DBUser](docs/models/DBUser)
+ - [Database](docs/models/Database)
+ - [DatabaseItems](docs/models/DatabaseItems)
+ - [DatabaseList](docs/models/DatabaseList)
+ - [DatabaseProperties](docs/models/DatabaseProperties)
+ - [DatabaseResource](docs/models/DatabaseResource)
  - [DayOfTheWeek](docs/models/DayOfTheWeek)
+ - [DeprecatedPagination](docs/models/DeprecatedPagination)
  - [ErrorMessage](docs/models/ErrorMessage)
  - [ErrorResponse](docs/models/ErrorResponse)
  - [MaintenanceWindow](docs/models/MaintenanceWindow)
@@ -194,12 +210,21 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
  - [PaginationLinks](docs/models/PaginationLinks)
  - [PatchClusterProperties](docs/models/PatchClusterProperties)
  - [PatchClusterRequest](docs/models/PatchClusterRequest)
+ - [PatchUserProperties](docs/models/PatchUserProperties)
  - [PostgresVersionList](docs/models/PostgresVersionList)
  - [PostgresVersionListData](docs/models/PostgresVersionListData)
+ - [Resource](docs/models/Resource)
+ - [ResourceMetadata](docs/models/ResourceMetadata)
  - [ResourceType](docs/models/ResourceType)
  - [State](docs/models/State)
  - [StorageType](docs/models/StorageType)
  - [SynchronizationMode](docs/models/SynchronizationMode)
+ - [User](docs/models/User)
+ - [UserItems](docs/models/UserItems)
+ - [UserList](docs/models/UserList)
+ - [UserProperties](docs/models/UserProperties)
+ - [UserResource](docs/models/UserResource)
+ - [UsersPatchRequest](docs/models/UsersPatchRequest)
 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)

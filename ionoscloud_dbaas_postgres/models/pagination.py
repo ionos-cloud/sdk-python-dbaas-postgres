@@ -47,7 +47,7 @@ class Pagination(object):
 
         'limit': 'limit',
 
-        'links': 'links',
+        'links': '_links',
     }
 
     def __init__(self, offset=0, limit=100, links=None, local_vars_configuration=None):  # noqa: E501

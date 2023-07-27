@@ -34,7 +34,7 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_dbaas_postgres.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_dbaas_postgres.LogsApi(api_client)
-    cluster_id = 'cluster_id_example' # str | The unique ID of the cluster.
+    cluster_id = '498ae72f-411f-11eb-9d07-046c59cc737e' # str | The unique ID of the cluster.
     try:
         # Get logs of your cluster
         api_response = api_instance.cluster_logs_get(cluster_id)

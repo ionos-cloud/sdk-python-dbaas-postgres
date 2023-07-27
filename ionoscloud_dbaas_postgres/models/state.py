@@ -28,12 +28,12 @@ class State(object):
     """
     allowed enum values
     """
-    AVAILABLE = "AVAILABLE"
-    BUSY = "BUSY"
-    DESTROYING = "DESTROYING"
-    DEGRADED = "DEGRADED"
-    FAILED = "FAILED"
-    UNKNOWN = "UNKNOWN"
+    AVAILABLE = 'AVAILABLE'
+    BUSY = 'BUSY'
+    DESTROYING = 'DESTROYING'
+    DEGRADED = 'DEGRADED'
+    FAILED = 'FAILED'
+    UNKNOWN = 'UNKNOWN'
 
     allowable_values = [AVAILABLE, BUSY, DESTROYING, DEGRADED, FAILED, UNKNOWN]  # noqa: E501
 

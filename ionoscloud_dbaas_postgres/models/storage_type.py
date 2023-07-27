@@ -28,10 +28,10 @@ class StorageType(object):
     """
     allowed enum values
     """
-    HDD = "HDD"
-    SSD = "SSD"
-    SSD_STANDARD = "SSD Standard"
-    SSD_PREMIUM = "SSD Premium"
+    HDD = 'HDD'
+    SSD = 'SSD'
+    SSD_STANDARD = 'SSD Standard'
+    SSD_PREMIUM = 'SSD Premium'
 
     allowable_values = [HDD, SSD, SSD_STANDARD, SSD_PREMIUM]  # noqa: E501
 

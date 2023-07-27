@@ -38,7 +38,7 @@ class ClusterResponse(object):
 
         'id': 'str',
 
-        'metadata': 'Metadata',
+        'metadata': 'ClusterMetadata',
 
         'properties': 'ClusterProperties',
     }
@@ -126,7 +126,7 @@ class ClusterResponse(object):
 
 
         :return: The metadata of this ClusterResponse.  # noqa: E501
-        :rtype: Metadata
+        :rtype: ClusterMetadata
         """
         return self._metadata
 
@@ -136,7 +136,7 @@ class ClusterResponse(object):
 
 
         :param metadata: The metadata of this ClusterResponse.  # noqa: E501
-        :type metadata: Metadata
+        :type metadata: ClusterMetadata
         """
 
         self._metadata = metadata

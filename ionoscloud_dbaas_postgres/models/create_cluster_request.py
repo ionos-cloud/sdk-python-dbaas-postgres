@@ -34,7 +34,7 @@ class CreateClusterRequest(object):
     """
     openapi_types = {
 
-        'metadata': 'Metadata',
+        'metadata': 'ClusterMetadata',
 
         'properties': 'CreateClusterProperties',
     }
@@ -68,7 +68,7 @@ class CreateClusterRequest(object):
 
 
         :return: The metadata of this CreateClusterRequest.  # noqa: E501
-        :rtype: Metadata
+        :rtype: ClusterMetadata
         """
         return self._metadata
 
@@ -78,7 +78,7 @@ class CreateClusterRequest(object):
 
 
         :param metadata: The metadata of this CreateClusterRequest.  # noqa: E501
-        :type metadata: Metadata
+        :type metadata: ClusterMetadata
         """
 
         self._metadata = metadata
